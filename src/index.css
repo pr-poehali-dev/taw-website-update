@@ -35,12 +35,14 @@
     --radius: 0.25rem;
 
     /* custom */
-    --ink: #1a1612;
-    --cream: #f7f4ef;
-    --rust: #d95f2b;
-    --rust-light: #f0b89a;
-    --sand: #e8e0d4;
-    --charcoal: #2e2a26;
+    --ink: #111827;
+    --cream: #ffffff;
+    --accent: #4a90e2;
+    --accent-light: #d0e7fa;
+    --accent-dark: #2d6bbf;
+    --sand: #f3f6fb;
+    --charcoal: #374151;
+    --gray-soft: #9ca3af;
   }
 }
 
@@ -72,7 +74,7 @@
 .cursor-dot {
   width: 8px;
   height: 8px;
-  background: var(--rust);
+  background: var(--accent);
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -86,7 +88,7 @@
 .cursor-ring {
   width: 36px;
   height: 36px;
-  border: 1.5px solid var(--rust);
+  border: 1.5px solid var(--accent);
   border-radius: 50%;
   position: fixed;
   top: 0;
@@ -188,7 +190,7 @@ body::before {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--rust);
+  background: var(--accent);
   transition: width 0.3s ease;
 }
 

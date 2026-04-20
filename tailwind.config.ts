@@ -26,11 +26,14 @@ export default {
 		},
 		extend: {
 			colors: {
-				rust: 'var(--rust)',
+				'accent-blue': 'var(--accent)',
+				'accent-light': 'var(--accent-light)',
+				'accent-dark': 'var(--accent-dark)',
 				ink: 'var(--ink)',
 				cream: 'var(--cream)',
 				sand: 'var(--sand)',
 				charcoal: 'var(--charcoal)',
+				'gray-soft': 'var(--gray-soft)',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
