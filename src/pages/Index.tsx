@@ -2,14 +2,15 @@ import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
 const M = {
-  yellow: "#FFE033",
-  pink: "#FF3CAC",
-  blue: "#2B5EFF",
-  green: "#00D68F",
-  orange: "#FF6B35",
+  yellow: "#F5A623",
+  pink: "#7B3FA0",
+  blue: "#5C2D7E",
+  green: "#9B59B6",
+  orange: "#F0705A",
   black: "#0D0D0D",
   white: "#FFFFFF",
-  cream: "#FFF9E6",
+  cream: "#F5EFF8",
+  dark: "#2D0A1E",
 };
 
 const PROJECTS = [
@@ -352,20 +353,46 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer style={{ background: M.black, padding: "24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
-        <div style={{ fontFamily: "'Cormorant', serif", fontWeight: 900, fontSize: 18, color: M.white }}>
-          TAW <span style={{ color: M.yellow }}>Design</span>
+      <footer style={{ background: M.black, borderTop: `4px solid ${M.yellow}` }}>
+        {/* Main footer row */}
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "32px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 16, flexWrap: "wrap" }}>
+          <div style={{ fontFamily: "'Cormorant', serif", fontWeight: 900, fontSize: 18, color: M.white }}>
+            TAW <span style={{ color: M.yellow }}>Design</span>
+          </div>
+          <span style={{ fontSize: 12, color: "rgba(255,255,255,0.3)" }}>© 2024 TAW Design</span>
+          <div style={{ display: "flex", gap: 16 }}>
+            {["Telegram", "Instagram", "VK"].map((s) => (
+              <a key={s} href="#" style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.4)", textDecoration: "none", textTransform: "uppercase", letterSpacing: "0.08em" }}
+                onMouseEnter={e => (e.currentTarget.style.color = M.yellow)}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.4)")}
+              >
+                {s}
+              </a>
+            ))}
+          </div>
         </div>
-        <span style={{ fontSize: 12, color: "rgba(255,255,255,0.3)" }}>© 2024 TAW Design</span>
-        <div style={{ display: "flex", gap: 16 }}>
-          {["Telegram", "Instagram", "VK"].map((s) => (
-            <a key={s} href="#" style={{ fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.4)", textDecoration: "none", textTransform: "uppercase", letterSpacing: "0.08em" }}
-              onMouseEnter={e => (e.currentTarget.style.color = M.yellow)}
-              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.4)")}
-            >
-              {s}
-            </a>
-          ))}
+
+        {/* TAW Family tag strip */}
+        <div style={{ borderTop: `2px solid rgba(255,255,255,0.08)` }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "20px 24px", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 24, flexWrap: "wrap" }}>
+            {/* Hard3oi22 tag */}
+            <img
+              src="https://cdn.poehali.dev/files/e4cb1c63-cc45-4618-99b9-e5b20ae0c4e1.png"
+              alt="Hard3oi22"
+              style={{ height: 36, filter: "invert(1) brightness(0.7)", opacity: 0.5 }}
+            />
+            {/* TAW Family logo */}
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <img
+                src="https://cdn.poehali.dev/files/3b745b34-a434-4330-a46c-b3216c3cfc50.png"
+                alt="TAW Family"
+                style={{ height: 48 }}
+              />
+              <span style={{ fontSize: 10, fontWeight: 700, color: "rgba(255,255,255,0.25)", letterSpacing: "0.12em", textTransform: "uppercase" }}>
+                TAW Family Studio
+              </span>
+            </div>
+          </div>
         </div>
       </footer>
 
